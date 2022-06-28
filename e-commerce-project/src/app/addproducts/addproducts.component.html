@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<style>
+    table,
+    th,
+    td {
+        border: 1px solid black;
+    }
+</style>
+
+<body>
+    <div class="row">
+        <div class="column">
+            <table>
+                <tr>
+                    <td>ID</td>
+                    <td>
+                        <input [(ngModel)]="adminprod.id" type="text">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Product Name</td>
+                    <td>
+                        <input [(ngModel)]="adminprod.productName" type="text">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Product Description</td>
+                    <td>
+                        <input [(ngModel)]="adminprod.productDescription" type="text">
+                    </td>
+                </tr>
+                <tr>
+                    <td>CatID</td>
+                    <td>
+                        <input [(ngModel)]="adminprod.catID" type="text">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Product Image</td>
+                    <td>
+                        <input [(ngModel)]="adminprod.productImage" type="text">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Product Mrp</td>
+                    <td>
+                        <input [(ngModel)]="adminprod.productMrp" type="text">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Product Discount</td>
+                    <td>
+                        <input [(ngModel)]="adminprod.productDiscount" type="text">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Final Price</td>
+                    <td>
+                        <input [(ngModel)]="adminprod.productFinal" type="text">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Product Quantity</td>
+                    <td>
+                        <input [(ngModel)]="adminprod.productQuantity" type="text">
+                    </td>
+                </tr>
+
+                <input type="submit" (click)="AddProduct()">
+                <input type="button" (click)="Show()" value="Show" />
+            </table>
+        </div>
+        <div class="column">
+
+            <table border="2">
+                <tr style="background-color:grey">
+                    <td style="padding: 10px;">ID</td>
+                    <td style="padding:10px;"> Name</td>
+                    <td style="padding: 10px;"> Description</td>
+                   <!-- <td>CatID</td>-->
+                    <td style="padding: 10px;"> Image</td>
+                    <td style="padding: 10px;"> Mrp</td>
+                    <td style="padding: 10px;"> Discount</td>
+                    <td style="padding: 10px;"> FinalPrice</td>
+                    <td style="padding: 10px;">Quantity</td>
+                </tr>
+                <tr *ngFor="let item of adminprods" style="background-color: lightgrey;">
+                    <td>{{item.id}}</td>
+                    <td>{{item.productName}}</td>
+                    <td>{{item.productDescription}}</td>
+                    <!--<td>{{item.catID}}</td>-->
+                    <td>{{item.productImage}}</td>
+                    <td>{{item.productMrp}}</td>
+                    <td>{{item.productDiscount}}</td>
+                    <td>{{item.productFinal}}</td>
+                    <td>{{item.productQuantity}}</td>
+
+                </tr>
+            </table>
+        </div>
+    </div>
+</body>
+
+</html>

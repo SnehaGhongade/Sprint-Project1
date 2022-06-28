@@ -44,7 +44,7 @@ namespace E_Commerce_Api.Controllers
         [HttpPost]
         [Route("register")]
         public IActionResult Register(RegisterViewModel registerViewModel)
-{
+        {
             LoginViewModel login = new LoginViewModel();
             login.EmailId = registerViewModel.EmailId;
             login.Password = registerViewModel.Password;

@@ -36,16 +36,18 @@ namespace E_Commerce_Api.Models
 
             modelBuilder.Entity<ProductCategory>(entity =>
             {
-                entity.ToTable("Product_Category");
+                entity.ToTable("ProductCategory");
 
-                entity.Property(e => e.Id).ValueGeneratedNever();
+                entity.Property(e => e.Id).HasColumnName("id");
 
                 entity.Property(e => e.CatName).HasMaxLength(50);
             });
 
             modelBuilder.Entity<ProductDetail>(entity =>
             {
-                entity.HasNoKey();
+                entity.ToTable("ProductDetail");
+
+                entity.Property(e => e.Id).HasColumnName("id");
 
                 entity.Property(e => e.ProductDescription).HasMaxLength(50);
 

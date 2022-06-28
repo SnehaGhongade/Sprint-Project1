@@ -7,7 +7,7 @@ namespace E_Commerce_Api.Models
 {
     public partial class ProductDetail
     {
-        public int? Id { get; set; }
+        public int Id { get; set; }
         public string ProductName { get; set; }
         public string ProductDescription { get; set; }
         public int? CatId { get; set; }

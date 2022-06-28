@@ -11,6 +11,9 @@ import { HomeComponent } from './home/home.component';
 import { AccountComponent } from './account/account.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { CartComponent } from './cart/cart.component';
+import { FinalorderComponent } from './finalorder/finalorder.component';
+import { AddproductsComponent } from './addproducts/addproducts.component';
+import { AddcategoryComponent } from './addcategory/addcategory.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +24,9 @@ import { CartComponent } from './cart/cart.component';
     AccountComponent,
     DashboardComponent,
     CartComponent,
+    FinalorderComponent,
+    AddproductsComponent,
+    AddcategoryComponent,
   
   ],
   imports: [

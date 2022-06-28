@@ -8,6 +8,10 @@ import { RegisterComponent } from './register/register.component';
 import { HomeComponent } from './home/home.component';
 import { CartComponent } from './cart/cart.component';
 import { AddressComponent } from './address/address.component';
+import { FinalorderComponent } from './finalorder/finalorder.component';
+import { AddproductsComponent } from './addproducts/addproducts.component';
+import { AddcategoryComponent } from './addcategory/addcategory.component';
+
 const routes: Routes = [
   {
     path: 'home',
@@ -41,7 +45,20 @@ const routes: Routes = [
   {
     path: 'address',
     component: AddressComponent
-  }
+  },
+  {
+    path: 'finalorder',
+    component: FinalorderComponent 
+   },
+   {
+    path: 'addproducts',
+    component: AddproductsComponent 
+   },
+   {
+    path: 'addcategory',
+    component: AddcategoryComponent 
+   }
+  
 ];
 
 @NgModule({
